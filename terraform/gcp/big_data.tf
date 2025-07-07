@@ -11,9 +11,10 @@ resource "google_sql_database_instance" "master_instance" {
         name  = "WWW"
         value = "0.0.0.0/0"
       }
+      ssl_mode = "ENCRYPTED_ONLY"
     }
     backup_configuration {
-      enabled = false
+      enabled = true
     }
   }
 }
